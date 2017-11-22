@@ -2,12 +2,13 @@ using System;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Threading.Tasks;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Azure.WebJobs.Host;
 using Microsoft.DocAsCode.Plugins;
+using System.Collections.Generic;
 using MarkdigEngine;
+using MarkdigEngine.Extensions;
 
 namespace MarkdownPreview
 {
@@ -21,13 +22,17 @@ namespace MarkdownPreview
         {
             var parameter = new MarkdownServiceParameters
             {
-                BasePath = "."
+                BasePath = ".",
+                Extensions = new Dictionary<string, object>
+                {
+                    { LineNumberExtension.EnableSourceInfo, false }
+                }
             };
             _service = new MarkdigMarkdownService(parameter);
         }
 
         [FunctionName("markdig")]
-        public static async Task<HttpResponseMessage> Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)]HttpRequestMessage req, TraceWriter log)
+        public static HttpResponseMessage Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)]HttpRequestMessage req, TraceWriter log)
         {
             log.Info("MarkdigEngine processed a request.");
 

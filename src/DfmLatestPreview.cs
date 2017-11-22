@@ -25,7 +25,7 @@ namespace MarkdownPreview
         }
 
         [FunctionName("dfmlatest")]
-        public static async Task<HttpResponseMessage> Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)]HttpRequestMessage req, TraceWriter log)
+        public static HttpResponseMessage Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)]HttpRequestMessage req, TraceWriter log)
         {
             log.Info("DfmLatestPreview processed a request.");
 
