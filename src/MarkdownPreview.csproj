@@ -4,7 +4,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.DocAsCode.Dfm" Version="2.30.0" />
-    <PackageReference Include="Microsoft.DocAsCode.MarkdigEngine" Version="2.31.0-alpha-1158-ga589f4e" />
+    <PackageReference Include="Microsoft.DocAsCode.MarkdigEngine" Version="2.32.0-alpha-0002-g57aea14" />
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="1.0.7" />
   </ItemGroup>
   <ItemGroup>
