@@ -3,8 +3,8 @@
     <TargetFramework>net461</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.DocAsCode.Dfm" Version="2.35.4" />
-    <PackageReference Include="Microsoft.DocAsCode.MarkdigEngine" Version="2.35.4" />
+    <PackageReference Include="Microsoft.DocAsCode.Dfm" Version="2.36.0" />
+    <PackageReference Include="Microsoft.DocAsCode.MarkdigEngine" Version="2.36.0" />
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="1.0.7" />
   </ItemGroup>
   <ItemGroup>
