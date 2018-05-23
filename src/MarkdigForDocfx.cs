@@ -8,7 +8,6 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Azure.WebJobs.Host;
 using Microsoft.DocAsCode.Plugins;
 using Microsoft.DocAsCode.MarkdigEngine;
-using Microsoft.DocAsCode.MarkdigEngine.Extensions;
 
 namespace MarkdownPreview
 {
@@ -25,7 +24,7 @@ namespace MarkdownPreview
                 BasePath = ".",
                 Extensions = new Dictionary<string, object>
                 {
-                    { LineNumberExtension.EnableSourceInfo, false }
+                    { "EnableSourceInfo", false }
                 }
             };
             _service = new MarkdigMarkdownService(parameter);
