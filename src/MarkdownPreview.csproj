@@ -1,10 +1,10 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net462</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.DocAsCode.Dfm" Version="2.40.7" />
-    <PackageReference Include="Microsoft.DocAsCode.MarkdigEngine" Version="2.40.7" />
+    <PackageReference Include="Microsoft.DocAsCode.Dfm" Version="2.43.2" />
+    <PackageReference Include="Microsoft.DocAsCode.MarkdigEngine" Version="2.43.2" />
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="1.0.24" />
   </ItemGroup>
   <ItemGroup>
